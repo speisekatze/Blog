@@ -7,6 +7,7 @@ Aufmerksamen Lesern ist sicher nicht entgangen das es nun offenbar kein NAS gibt
 Während and dem Barebone Gehäuse für den PI gebastelt wurde ist ein gebrauchter Supermicro Server eingezogen. Darauf liefen - oder auch nicht - zunächst einige Hypervisor (ESXi, HyperV, Proxmox). Die ursprüngliche Ausstattung war dann auch bald zu wenig und es gab einige Upgrades:
 * 2x L5640 (6 Kern "Low-Power")
 * 6x 16GB DDR3-1066 ECC REG
+
 Anfang des Jahres hat sich dann das alte "Datengrab" - eine externe 4TB Platte - verabschiedet. Dies rückte das NAS Projekt mal wieder in den Fokus. Für einen niedrigen 4-stelligen Betrag wurden dann einige Festplatten besorgt.
 Geplant war dann eigentlich den RAID-Controller an eine VM im Proxmox durchzureichen und dort Truenas zu installieren. Leider mag der Controller weder den IT-Mode noch war das Passthrough wirklich erfolgreich.
 Allerdings bietet Truenas Scale auch eine auf KVM basierte Virtualisierung und k8s basierte Container-Apps. Also weg mit Proxmox und Truenas direkt installiert, glücklicherweise bot das Supermicro-Board genug SATA Ports um auf den Controller verzichten zu können
