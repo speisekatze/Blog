@@ -1,7 +1,8 @@
 # NAS ohne PI
 
 Einige haben ja [DIY NAS](https://www.fachinformatiker.de/blogs/entry/44-diy-nas/) gelesen und ich wurde auch schon gefragt ob da noch was passiert. Ja ein paar Dinge sind passiert. Diverse Gehäuseteile wurden gekauft einige wurden gedruckt. CPU Kühler für den Shuttle-Barbone wurden gekauft und modifiziert um auf dem Nano PI Platz zu finden. Und irgendwann ist man an dem Punkt das ganze mal testhalber einzuschalten und enttäuscht zu werden. Android läuft auf dem PI prima, die getesteten Linuxvarianten eher "meh". Der NanoPI versorgt nun mit Android 11, einem Touch-Display und ein paar Verstärkermodulen eine Küche mit Spotify, Audible, Youtube, ..
-Aufmerksamen Lesern ist sicher nicht entgangen das es nun offenbar kein NAS gibt. Doch, aber es ist nicht mehr so Low-Power wie anfangs gewollt war.
+Aufmerksamen Lesern ist sicher nicht entgangen das es nun offenbar kein NAS gibt. 
+Also ja schon, aber es ist nicht mehr so Low-Power wie anfangs gewollt war.
 
 ## Neue (alte) Hardware
 Während and dem Barebone Gehäuse für den PI gebastelt wurde ist ein gebrauchter Supermicro Server eingezogen. Darauf liefen - oder auch nicht - zunächst einige Hypervisor (ESXi, HyperV, Proxmox). Die ursprüngliche Ausstattung war dann auch bald zu wenig und es gab einige Upgrades:
@@ -21,3 +22,7 @@ Für den Heimgebrauch kann man durchaus auf L2-ARC und slog-Device verzichten. D
 Einerseits hat das NAS nun mehr Leistung als mit dem NanoPi möglich gewesen wäre, dafür steht kein Proxmox Server mehr zur Verfügung. Wie schon gesagt bietet Truenas Scale eine rudimentäre Schnittstelle zu KVM Virtualisierung und App-Container über k8s, in Freenas und Truenas Core wird/wurde das über die FreeBSD eigenen Jails gelöst.
 Der Truenas eigene App-Pool wächst immer weiter und bietet neben üblichen wie NextCloud und PLEX auch beispielsweise miniIO. Man kann aber auch eigene Container importieren oder den sehr umfangreichen [Truecharts Katalog](https://truecharts.org/docs/charts/description_list/) nutzen.
 
+Für das Heimnetz stellt Truenas nun einige Dienste bereit
+![Truenas APPs](https://raw.githubusercontent.com/speisekatze/Blog/main/images/truenas_services.png)
+
+Über einen externen Proxy und VPN werden einige der Dienste auch nach außen freigegeben, so kann man beispielsweise den codeserver von jedem beliebigen Browser nutzen.
