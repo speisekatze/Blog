@@ -15,6 +15,9 @@ Allerdings bietet Truenas Scale auch eine auf KVM basierte Virtualisierung und k
 Nach der Installation und Ersteinrichtung des ZPools wird man von einem fröhlichen Dashboard begrüßt.
 ![nach der Erstinstallation und Einrichtung des ZPools](https://raw.githubusercontent.com/speisekatze/Blog/main/images/truenas_supermicro.png)
 
-Für den Heimgebrauch kann man durchaus auf L2-ARC und slog-Device verzichten. Die Anforderungen für einen brauchbaren slog übersteigen die Fähigkeiten normaler SSDs ohnehin. Wenn man also nicht grad ein paar Enterprise-SSDs rumliegen hat, lässt man das besser. Einen L2-ARC kann man einfach nachrüsten falls er wieder erwarten doch notwendig wird.
+Für den Heimgebrauch kann man durchaus auf L2-ARC und slog-Device verzichten. Die Anforderungen für einen brauchbaren slog übersteigen die Fähigkeiten normaler SSDs ohnehin. Wenn man also nicht grad ein paar Enterprise-SSDs rumliegen hat, lässt man das besser. Der L2-ARC hilft nur wenn der ARC voll läuft oder zu klein für das Working-Set ist. Einen L2-ARC kann man einfach nachrüsten falls er wieder erwarten doch notwendig wird. Wobei selbst dann mehr RAM für einen größeren ARC sinnvoller ist.
 
-Einerseits hat das NAS nun mehr Leistung als mit dem NanoPi möglich gewesen wäre, dafür steht kein Proxmox Server mehr zur Verfügung. 
+## Was nun?
+Einerseits hat das NAS nun mehr Leistung als mit dem NanoPi möglich gewesen wäre, dafür steht kein Proxmox Server mehr zur Verfügung. Wie schon gesagt bietet Truenas Scale eine rudimentäre Schnittstelle zu KVM Virtualisierung und App-Container über k8s, in Freenas und Truenas Core wird/wurde das über die FreeBSD eigenen Jails gelöst.
+Der Truenas eigene App-Pool wächst immer weiter und bietet neben üblichen wie NextCloud und PLEX auch beispielsweise miniIO. Man kann aber auch eigene Container importieren oder den sehr umfangreichen [Truecharts Katalog](https://truecharts.org/docs/charts/description_list/) nutzen.
+
