@@ -26,3 +26,16 @@ Für das Heimnetz stellt Truenas nun einige Dienste bereit
 ![Truenas APPs](https://raw.githubusercontent.com/speisekatze/Blog/main/images/truenas_services.png)
 
 Über einen externen Proxy und VPN werden einige der Dienste auch nach außen freigegeben, so kann man beispielsweise den codeserver von jedem beliebigen Browser nutzen.
+
+## Neue (neue) Hardware
+Leider war diese Hardwarekonfiguration tatsächlich sehr weit von stromsparend entfernt. Ohne Last verbrauchte das System zwischen 150 und 170 Watt. Spitzenverbrauch lag bei 230 Watt. Da das System dauerhaft laufen soll war das schlicht zu viel. Tatsächlich hat das System meinen Stromverbrauch in etwas über 6 Monaten mehr als verdoppelt.
+Neue Hardware ist deutlich energieeffizienter, also mal schauen was es so gibt. Leider ist die alte Hardware so alt, daß nichts davon in einem neuen System nutzbar wäre. Die Alder-Lake Plattform war zum Zeitpunkt des Wechsels sehr verlockend. 
+Die Wahl fiel letztlich auf:
+* 64 GB DDR4 RAM in 2 Modulen
+* Core i5-12500T
+* B660 Mikro-ATX Board 
+
+Nach einiger Wartezeit und etwas RAM aus einem alten Desktop sieht das dann so aus.
+![Neue Hardware](https://raw.githubusercontent.com/speisekatze/Blog/main/images/truenas_alder_lake.png)
+
+Der Stromverbrauch des neuen Systems liegt nun bei 75-80 Watt und 120 Watt unter last. Nicht perfekt aber besser. Beim aktuellen Stromverbrauch muss man auch bedenken, daß Truenas die Festplatten nicht schlafen legt und diese damit mindestens 20 Watt bei Zugriffen eher 40 Watt verbrauchen.
